@@ -1,5 +1,3 @@
-//import type { GenerationMixItem } from "../types";
-
 const url: String = import.meta.env.VITE_API_URL;
 const status: String = import.meta.env.VITE_API_STATUS;
 const generationMix: String = import.meta.env.VITE_API_GENERATION_MIX;

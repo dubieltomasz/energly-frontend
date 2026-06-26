@@ -1,34 +1,41 @@
-/*export enum CleanEnergySource {
-    Biomass = 'biomass',
-    Nuclear = 'nuclear',
-    Hydro = 'hydro',
-    Wind = 'wind',
-    Solar = 'solar',
-};*/
-
-export interface GenerationMixItem {
+export type GenerationMixItem = {
     fuel: string;
     perc: number;
 };
 
-export interface GenerationInterval {
-    from: string;
-    to: string;
+export type EnergyDayResponse = {
+    date: string;
     generationmix: GenerationMixItem[];
-};
-
-export interface GenerationResponse {
-    data: GenerationInterval[];
-};
-
-export interface DayMix {
-  date: string;
-  generationmix: GenerationMixItem[];
-  cleanEnergyPercent: number;
-}
-
-export interface OptimalWindow {
-    from: string;
-    to: string;
     cleanEnergyPercent: number;
-}
+};
+
+export type EnergyApiResponse = EnergyDayResponse[];
+
+export type FuelType =
+    | 'biomass'
+    | 'coal'
+    | 'imports'
+    | 'gas'
+    | 'nuclear'
+    | 'other'
+    | 'hydro'
+    | 'solar'
+    | 'wind';
+
+export type CleanEnergySource =
+    | 'biomass'
+    | 'nuclear'
+    | 'hydro'
+    | 'wind'
+    | 'solar'
+
+export type EnergyChartData = {
+    name: FuelType;
+    value: number;
+};
+
+export type EnergyDay = {
+    date: Date;
+    cleanEnergyPercent: number;
+    chartData: EnergyChartData[];
+};
