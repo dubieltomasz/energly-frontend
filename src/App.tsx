@@ -1,6 +1,7 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { GenerationMixData } from './components/home';
+import { GenerationMix } from './components/generationMix';
+import { OptimalWindow } from './components/optimalWindow';
 import { Navigation } from './components/navigation';
 import { Loader } from './components/loading';
 
@@ -15,8 +16,8 @@ function App() {
             <Loader />
             <Navigation items={navItems} />
             <Routes>
-                <Route path='/' element={<GenerationMixData />} />
-                <Route path='/optimal-window' element={<GenerationMixData />} />
+                <Route path='/' element={<GenerationMix />} />
+                <Route path='/optimal-window' element={<OptimalWindow />} />
             </Routes>
         </BrowserRouter>
     )

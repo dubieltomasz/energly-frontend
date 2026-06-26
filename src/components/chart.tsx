@@ -25,6 +25,11 @@ export const EnergyDayCard: React.FC<Props> = ({ title, date, cleanPercent, data
                 <h3 className='energy-card-title'>{title}</h3>
                 {date && <small className='energy-card-date'>{date}</small>}
             </div>
+
+            <div className={'energy-card-badge'}>
+                {cleanPercent}% Clean Energy
+            </div>
+
             <div className='energy-card-chart'>
                 <ResponsiveContainer>
                     <PieChart>
@@ -42,9 +47,6 @@ export const EnergyDayCard: React.FC<Props> = ({ title, date, cleanPercent, data
                         <Tooltip formatter={(value) => `${value}%`} />
                     </PieChart>
                 </ResponsiveContainer>
-            </div>
-            <div className={'energy-card-badge'}>
-                {cleanPercent}% Clean Energy
             </div>
         </div>
     );

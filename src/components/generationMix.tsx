@@ -3,7 +3,7 @@ import { EnergyDayCard } from './chart';
 import {fetchEnergyMix} from '../util/energlyApi';
 import type { EnergyDayResponse } from '../util/types';
 
-export const GenerationMixData: React.FC = () => {
+export const GenerationMix: React.FC = () => {
     const [firstDay, setFirstDay] = useState<EnergyDayResponse | null>(null);
     const [secondDay, setSecondDay] = useState<EnergyDayResponse | null>(null);
     const [thirdDay, setThirdDay] = useState<EnergyDayResponse | null>(null);
