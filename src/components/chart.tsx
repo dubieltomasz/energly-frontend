@@ -1,7 +1,7 @@
-import './chart.css';
+import '../style/chart.css';
 import React from 'react';
 import { PieChart, Pie, ResponsiveContainer, Tooltip } from 'recharts';
-import type { CleanEnergySource } from '../types';
+import type { CleanEnergySource } from '../util/types';
 
 type DataItem = {
     name: string;

@@ -1,4 +1,4 @@
-import './navigation.css';
+import '../style/navigation.css';
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 

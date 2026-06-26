@@ -1,4 +1,4 @@
-import './button.css';
+import '../style/button.css';
 import React from 'react';
 
 type Props = {

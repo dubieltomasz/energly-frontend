@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { EnergyDayCard } from './chart';
-import {fetchEnergyMix} from '../api/energlyApi';
-import type { EnergyDayResponse } from '../types';
+import {fetchEnergyMix} from '../util/energlyApi';
+import type { EnergyDayResponse } from '../util/types';
 
 export const GenerationMixData: React.FC = () => {
     const [firstDay, setFirstDay] = useState<EnergyDayResponse | null>(null);
